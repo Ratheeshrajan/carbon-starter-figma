@@ -12,7 +12,7 @@ import { getRoutes } from './routes/routes.js';
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production';
-const port = process.env.PORT || 5173;
+const port = process.env.PORT || 6767;
 const base = process.env.BASE || '/';
 const ABORT_DELAY = 10000;
 
@@ -59,6 +59,7 @@ app.use('*all', async (req, res) => {
         ? await fs.readFile('./dist/client/index.html', 'utf-8')
         : '';
       template = templateHtml;
+      // eslint-disable-next-line import/no-unresolved
       render = (await import('../dist/server/entry-server.js')).render;
     }
 
