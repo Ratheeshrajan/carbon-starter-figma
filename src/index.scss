@@ -1,0 +1,49 @@
+/**
+ * Copyright IBM Corp. 2025
+ *
+ * This source code is licensed under the Apache-2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@use '@carbon/react' with (
+  $font-path: '@ibm/plex'
+);
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/themes';
+@use '@carbon/react/scss/colors' as *;
+
+/* Importing the component styles here will load them
+   before the JavaScript, which will make the page 
+   not "flashing style" - everything will be at the right
+   place from the start. In most case, avoid loading styles
+   from the JavaScript. */
+@use 'layouts/page-layout';
+@use 'pages/welcome/welcome';
+@use 'pages/dashboard/dashboard';
+@use 'components/welcomeHeader/welcomeHeader';
+@use 'components/footer/footer';
+
+/* system preference theme by default */
+:root {
+  @include theme(themes.$g10);
+
+  --cs-brand: #{$blue-30};
+  --cs-brand-alt: #{$blue-20};
+  --cs-logo-filter: invert(100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include theme(themes.$g100);
+
+    --cs-brand: #{$blue-80};
+    --cs-brand-alt: #{$blue-90};
+    --cs-logo-filter: initial;
+  }
+}
+
+body {
+  background-color: $background;
+  block-size: calc(100% - #{$spacing-09});
+}

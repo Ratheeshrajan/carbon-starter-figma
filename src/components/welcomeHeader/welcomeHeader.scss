@@ -1,0 +1,30 @@
+/**
+ * Copyright IBM Corp. 2025
+ *
+ * This source code is licensed under the Apache-2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+ 
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.cs--welcome-header {
+  margin-block-end: $spacing-09;
+}
+
+.cs--welcome-header__image-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle,
+    var(--cs-brand-alt) 20%,
+    rgb(0 0 0 / 0%) 50%
+  );
+}
+
+.cs--welcome-header__logo {
+  block-size: calc(4 * #{$spacing-09});
+  filter: var(--cs-logo-filter);
+}
