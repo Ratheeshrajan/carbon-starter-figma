@@ -22,6 +22,7 @@ import {
   SideNavMenu,
   SideNavMenuItem,
   SkipToContent,
+  Theme,
 } from '@carbon/react';
 
 import {
@@ -64,7 +65,7 @@ export const Nav = () => {
   };
 
   return (
-    <>
+    <Theme theme="g100">
       <Header aria-label="fed-at-ibm">
         <SkipToContent />
         <HeaderMenuButton
@@ -79,7 +80,7 @@ export const Nav = () => {
         </HeaderName>
         <HeaderNavigation aria-label="fed-at-ibm">
           {/* Render navigation items for viewports equal to or larger than the "Large" breakpoint.
-          This applies to desktop views. */}
+            This applies to desktop views. */}
           <NavigationItems location={location} />
         </HeaderNavigation>
         <HeaderGlobalBar>
@@ -99,7 +100,7 @@ export const Nav = () => {
         <SideNavItems>
           <HeaderSideNavItems hasDivider>
             {/* Render navigation items for viewports smaller than the "Large" breakpoint.
-              This applies to mobile and small tablet views. */}
+                This applies to mobile and small tablet views. */}
             <NavigationItems location={location} />
           </HeaderSideNavItems>
           <SideNavMenu renderIcon={MagicWand} title="Getting started">
@@ -112,6 +113,6 @@ export const Nav = () => {
           </SideNavLink>
         </SideNavItems>
       </SideNav>
-    </>
+    </Theme>
   );
 };
