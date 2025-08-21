@@ -5,17 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { usePrefersDarkScheme } from '@carbon/react';
+// import { usePrefersDarkScheme } from '@carbon/react';
 import { useEffect, useState } from 'react';
 
 export const useThemes = () => {
-  const prefersDark = usePrefersDarkScheme();
+  const prefersDark = false; // usePrefersDarkScheme();
   const [themeReady, setThemeReady] = useState(false);
 
   // Will not resolve to actual theme preferences until after first render
   // monitor themeReady to make use of primary and secondary theme.
-  const [primaryTheme, setPrimaryTheme] = useState('g100');
-  const [secondaryTheme, setSecondaryTheme] = useState('g90');
+  const [primaryTheme, setPrimaryTheme] = useState('g10');
+  const [secondaryTheme, setSecondaryTheme] = useState('white');
 
   useEffect(() => {
     if (prefersDark) {
