@@ -23,6 +23,7 @@
 @use 'pages/dashboard/dashboard';
 @use 'components/welcomeHeader/welcomeHeader';
 @use 'components/footer/footer';
+@use 'components/activitiesTable/activitiesTable';
 
 /* system preference theme by default */
 :root {

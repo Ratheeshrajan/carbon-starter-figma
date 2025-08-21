@@ -1,0 +1,69 @@
+/**
+ * Copyright IBM Corp. 2025
+ *
+ * This source code is licensed under the Apache-2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/colors' as *;
+@use '@carbon/react/scss/config' as *;
+
+.cs--activities-table {
+  width: 100%;
+  
+  &__breadcrumb {
+    margin-bottom: $spacing-05;
+  }
+  
+  &__header {
+    margin-bottom: $spacing-07;
+    
+    h2 {
+      @include type-style('heading-04');
+      margin-bottom: $spacing-06;
+    }
+  }
+  
+  &__usage {
+    h3 {
+      @include type-style('heading-03');
+      margin-bottom: $spacing-03;
+    }
+    
+    p {
+      @include type-style('body-01');
+      color: $text-secondary;
+    }
+  }
+  
+  &__container {
+    margin-top: $spacing-05;
+    
+    .#{$prefix}--data-table {
+      width: 100%;
+      background-color: $layer-01;
+      
+      th {
+        background-color: $layer-02;
+        color: $text-primary;
+        height: $spacing-09;
+        text-align: left;
+        font-weight: 600;
+      }
+      
+      td {
+        height: $spacing-08;
+      }
+    }
+    
+    .#{$prefix}--pagination {
+      border-top: 1px solid $border-subtle;
+      background-color: $layer-01;
+    }
+  }
+}
+
+// Made with Bob

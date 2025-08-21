@@ -9,22 +9,10 @@ import { Column, Grid, Tile } from '@carbon/react';
 
 import { Footer } from '../../components/footer/Footer';
 import { PageLayout } from '../../layouts/page-layout';
+import { ActivitiesTable } from '../../components/activitiesTable/ActivitiesTable';
 
 // The styles are imported into index.scss by default.
 // Do the same unless you have a good reason not to.
-
-const NumberTile = () => {
-  return (
-    <Column sm={4} md={4} lg={4} xlg={4}>
-      <Tile className="cs--dashboard__tile cs--dashboard__tile--number">
-        <dl>
-          <dt>Active users</dt>
-          <dd>{Math.round(Math.random() * 1000)}</dd>
-        </dl>
-      </Tile>
-    </Column>
-  );
-};
 
 const Dashboard = () => {
   return (
@@ -33,19 +21,9 @@ const Dashboard = () => {
       fallback={<p>Loading dashboard page...</p>}
     >
       <Grid>
-        <NumberTile />
-        <NumberTile />
-        <NumberTile />
-        <NumberTile />
-
-        <Column sm={4} md={4} lg={8} xlg={8}>
+        <Column sm={4} md={8} lg={16} xlg={16}>
           <Tile className="cs--dashboard__tile cs--dashboard__tile--data">
-            <strong>Visualization</strong>
-          </Tile>
-        </Column>
-        <Column sm={4} md={4} lg={8} xlg={8}>
-          <Tile className="cs--dashboard__tile cs--dashboard__tile--data">
-            <strong>Cool table</strong>
+            <ActivitiesTable />
           </Tile>
         </Column>
         <Footer />
@@ -55,3 +33,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+// Made with Bob
