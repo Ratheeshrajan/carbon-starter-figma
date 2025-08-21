@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { Column, Grid, Tile } from '@carbon/react';
+import { Column, Grid, Breadcrumb, BreadcrumbItem } from '@carbon/react';
 
 import { Footer } from '../../components/footer/Footer';
 import { PageLayout } from '../../layouts/page-layout';
@@ -20,11 +20,15 @@ const Dashboard = () => {
       className="cs--dashboard"
       fallback={<p>Loading dashboard page...</p>}
     >
+      <Breadcrumb className="cs--dashboard__breadcrumb">
+        <BreadcrumbItem>
+          <a href="/">Home</a>
+        </BreadcrumbItem>
+        <BreadcrumbItem isCurrentPage>Activity</BreadcrumbItem>
+      </Breadcrumb>
       <Grid>
         <Column sm={4} md={8} lg={16} xlg={16}>
-          <Tile className="cs--dashboard__tile cs--dashboard__tile--data">
-            <ActivitiesTable />
-          </Tile>
+          <ActivitiesTable />
         </Column>
         <Footer />
       </Grid>

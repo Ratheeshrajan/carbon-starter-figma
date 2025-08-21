@@ -42,7 +42,13 @@ function NavigationItems({ location }) {
       >
         Dashboard
       </HeaderMenuItem>
-      <HeaderMenuItem href="#">Link 2</HeaderMenuItem>
+      <HeaderMenuItem
+        as={Link}
+        to="/contacts"
+        isActive={location.pathname === '/contacts'}
+      >
+        Contact
+      </HeaderMenuItem>
       <HeaderMenuItem href="#">Link 3</HeaderMenuItem>
       <HeaderMenu aria-label="Link 4" menuLinkName="Link 4">
         <HeaderMenuItem href="#one">Sub-link 1</HeaderMenuItem>

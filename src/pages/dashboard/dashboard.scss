@@ -12,6 +12,10 @@
 
 .cs--dashboard {
   @include common.page-common;
+  
+  &__breadcrumb {
+    margin-bottom: $spacing-05;
+  }
 }
 
 .cs--dashboard__tile {

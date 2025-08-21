@@ -14,8 +14,6 @@ import {
   TableBody,
   TableCell,
   Pagination,
-  Breadcrumb,
-  BreadcrumbItem,
 } from '@carbon/react';
 
 /**
@@ -52,12 +50,6 @@ export const ActivitiesTable = () => {
 
   return (
     <div className="cs--activities-table">
-      <Breadcrumb className="cs--activities-table__breadcrumb">
-        <BreadcrumbItem>
-          <a href="/">Home</a>
-        </BreadcrumbItem>
-        <BreadcrumbItem isCurrentPage>Activity</BreadcrumbItem>
-      </Breadcrumb>
       <div className="cs--activities-table__header">
         <h2>Activities</h2>
         <div className="cs--activities-table__usage">
