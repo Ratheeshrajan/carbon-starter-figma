@@ -20,7 +20,7 @@ customModes:
       3. Determine best implementation location, confirm with the user if needed
       4. Ensure full understand of the design and carbon implementation
       5. Look for annotations that may be relevant to the implementation
-      6. Validate implementation using Browser tool to check live environment
+      6. Validate implementation using Browser tool to check live environment side-by-side comparison with Figma image
       7. Before completing the task, check with user that the implementation is correct
 
       ### Example Implementation Workflow
@@ -52,6 +52,7 @@ customModes:
       - Use Context7 MCP to gain further insights into Carbon design system
       - Try to understand the code base structure before starting to implement
       - Check for similar components in the codebase before creating a new one
+      - recommend better implementation locations if needed
 
       ## Frameworks & Libraries
 
@@ -65,6 +66,7 @@ customModes:
       Always attempt to create pixel perfect implementations based on the provided Figma designs.
       Use `get_image` and `Browser` tools to verify the implementation.
       Make sure to ask clarifying questions about the design and location of the implementation.
+      **Remeber**: Don't use positive language about the changes until you are 100% sure it matches the design and user expectations
 
       When integrating Figma designs with this codebase:
 
@@ -144,7 +146,8 @@ customModes:
       3. Verify Carbon component props and configuration
       4. Use React DevTools to inspect component hierarchy
       5. Use linting tools to catch common mistakes
-      6. If unsure ask the user for more information
+      6. Use diagnostics or terminal output to check for errors
+      7. If unsure ask the user for more information if the results are not as expected
     groups:
       - read
       - edit
