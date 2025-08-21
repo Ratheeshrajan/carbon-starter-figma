@@ -5,7 +5,9 @@
       "args": [
         "-y",
         "@upstash/context7-mcp"
-      ]
+      ],
+      "timeout": 300,
+      "alwaysAllow": []
     },
     "Figma Dev Mode MCP": {
       "type": "sse",
