@@ -33,14 +33,14 @@
    the practice shows a fixed height often works better. Choose a
    height that is a multiple of one of the spacing tokens to keep the
    vertical rhythm */
-.cs--dashboard__tile--number {
+.cs--dashboard__tile {
   min-block-size: calc(2 * $spacing-10);
   
-  dt {
+  h4 {
     @include type-style('heading-01');
   }
   
-  dd {
+  p {
     @include type-style('body-01');
     margin-top: $spacing-02;
   }

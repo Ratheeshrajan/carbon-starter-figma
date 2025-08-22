@@ -28,19 +28,6 @@ import { PageLayout } from '../../layouts/page-layout';
 // The styles are imported into index.scss by default.
 // Do the same unless you have a good reason not to.
 
-const NumberTile = ({ title, description }) => {
-  return (
-    <Column sm={4} md={4} lg={4} xlg={4}>
-      <Tile className="cs--dashboard__tile cs--dashboard__tile--number">
-        <dl>
-          <dt>{title}</dt>
-          <dd>{description}</dd>
-        </dl>
-      </Tile>
-    </Column>
-  );
-};
-
 const Dashboard = () => {
   // Sample data for the table
   const tableData = {
@@ -107,10 +94,30 @@ const Dashboard = () => {
         <Button>Validate</Button>
       </div>
       <Grid>
-        <NumberTile title="Title 01" description="Description" />
-        <NumberTile title="Title 02" description="Description" />
-        <NumberTile title="Title 03" description="Description" />
-        <NumberTile title="Title 04" description="Description" />
+        <Column sm={4} md={4} lg={4} xlg={4}>
+          <Tile className="cs--dashboard__tile">
+            <h4>Title 01</h4>
+            <p>Description</p>
+          </Tile>
+        </Column>
+        <Column sm={4} md={4} lg={4} xlg={4}>
+          <Tile className="cs--dashboard__tile">
+            <h4>Title 02</h4>
+            <p>Description</p>
+          </Tile>
+        </Column>
+        <Column sm={4} md={4} lg={4} xlg={4}>
+          <Tile className="cs--dashboard__tile">
+            <h4>Title 03</h4>
+            <p>Description</p>
+          </Tile>
+        </Column>
+        <Column sm={4} md={4} lg={4} xlg={4}>
+          <Tile className="cs--dashboard__tile">
+            <h4>Title 04</h4>
+            <p>Description</p>
+          </Tile>
+        </Column>
 
         <Column sm={4} md={8} lg={16} xlg={16}>
           <Tile className="cs--dashboard__tile cs--dashboard__tile--data">
@@ -166,3 +173,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+// Made with Bob

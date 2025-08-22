@@ -7,6 +7,8 @@
 - There was an error in the code. This is related to row mapping. Bob fixed that error.
 - Bob added tiles in Dashboard.jsx code.
 - Given a prompt to add breadcrumb and validate button.
+- Prompted to add tiles in grid columns
+- Asked bob to add Caron tiles instead of custom tile component
 
 **** Final results
 
