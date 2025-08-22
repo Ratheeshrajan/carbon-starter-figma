@@ -16,7 +16,7 @@ export const Router = () => {
     <Routes>
       <Route element={<ThemeLayout />}>
         <Route index path="/" element={<Welcome />} />
-        <Route index path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Route>
     </Routes>
   );

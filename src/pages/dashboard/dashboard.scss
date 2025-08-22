@@ -14,6 +14,13 @@
   @include common.page-common;
 }
 
+.cs--dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-05;
+}
+
 .cs--dashboard__tile {
   margin-block: $spacing-05;
   block-size: calc(
@@ -28,9 +35,57 @@
    vertical rhythm */
 .cs--dashboard__tile--number {
   min-block-size: calc(2 * $spacing-10);
+  
+  dt {
+    @include type-style('heading-01');
+  }
+  
+  dd {
+    @include type-style('body-01');
+    margin-top: $spacing-02;
+  }
 }
 
 /* Same as for previous declaration */
 .cs--dashboard__tile--data {
   min-block-size: calc(8 * $spacing-10);
+}
+
+.cs--dashboard__table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cs--dashboard__table {
+  width: 100%;
+  border-collapse: collapse;
+  
+  th, td {
+    padding: $spacing-04;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  th {
+    font-weight: 600;
+    background-color: #f4f4f4;
+  }
+  
+  tr:hover td {
+    background-color: #f4f4f4;
+  }
+}
+
+.cs--dashboard__title {
+  @include type-style('heading-03');
+  margin-bottom: $spacing-02;
+}
+
+.cs--dashboard__subtitle {
+  @include type-style('body-01');
+  margin-bottom: $spacing-05;
+}
+
+.cs--dashboard__pagination {
+  margin-top: $spacing-05;
 }
