@@ -8,10 +8,15 @@
 - Bob added tiles in Dashboard.jsx code.
 - Given a prompt to add breadcrumb and validate button.
 - Prompted to add tiles in grid columns
-- Asked bob to add Caron tiles instead of custom tile component
+- Asked bob to add Carbon tiles instead of custom tile component
+
 ####Contact page
+
 - Initial out put styling was off
 - Prompted to get better spacing and styling
+- Button in header not aligned with heading
+- Asked to align title and button and heading
+- Asked to add list item in Carbon list component rather than native ordered list
 
 #### Final results
 
