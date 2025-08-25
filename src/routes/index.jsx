@@ -9,6 +9,7 @@ import { Route, Routes } from 'react-router';
 
 import Welcome from '../pages/welcome/Welcome.jsx';
 import Dashboard from '../pages/dashboard/Dashboard.jsx';
+import Contacts from '../pages/contacts/Contacts.jsx';
 import { ThemeLayout } from '../layouts/theme-layout.jsx';
 
 export const Router = () => {
@@ -17,6 +18,7 @@ export const Router = () => {
       <Route element={<ThemeLayout />}>
         <Route index path="/" element={<Welcome />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Route>
     </Routes>
   );

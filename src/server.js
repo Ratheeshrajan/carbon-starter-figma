@@ -9,6 +9,14 @@ import fs from 'node:fs/promises';
 import express from 'express';
 import { Transform } from 'node:stream';
 import { getRoutes } from './routes/routes.js';
+import crypto from 'node:crypto';
+
+// Polyfill for crypto.getRandomValues if not available
+if (!crypto.getRandomValues) {
+  crypto.getRandomValues = function (array) {
+    return crypto.randomFillSync(array);
+  };
+}
 
 // Constants
 const isProduction = process.env.NODE_ENV === 'production';

@@ -1,0 +1,49 @@
+/**
+ * Copyright IBM Corp. 2025
+ *
+ * This source code is licensed under the Apache-2.0 license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@use '@carbon/react/scss/grid' as *;
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '../page-common' as common;
+
+.cs--contacts {
+  @include common.page-common;
+}
+
+.cs--contacts__header {
+  margin-bottom: $spacing-05;
+}
+
+.cs--contacts__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-11;
+
+  h1 {
+    @include type-style('heading-05');
+    margin: 0;
+  }
+}
+
+.cds--accordion {
+  margin-bottom: $spacing-07;
+}
+
+.cs--contacts__content {
+  margin-top: $spacing-07;
+
+  .cds--list--ordered {
+    padding-left: $spacing-07;
+  }
+
+  .cds--list__item {
+    margin-bottom: $spacing-05;
+  }
+}
+
+// Made with Bob
